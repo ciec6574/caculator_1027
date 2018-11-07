@@ -69,6 +69,11 @@ class ViewController: UIViewController {
         temp = Double(result.text!)!
         result.text = ""
     }
+    @IBAction func buttonSqrt(_ sender: Any) {
+        temp = Double(result.text!)!
+        temp = sqrt(temp)
+        result.text = "\(temp)"
+    }
     @IBAction func buttonResult(_ sender: Any) {
         if operatorFlag == 1
         {
