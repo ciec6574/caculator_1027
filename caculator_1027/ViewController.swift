@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     var temp:Double = 0
+    var temp2:Double = 0
     var operatorFlag = 0
+    var operatorFlag2 = 0
 
     @IBOutlet var result: UITextField!
     @IBAction func button1(_ sender: Any) {
@@ -50,24 +52,72 @@ class ViewController: UIViewController {
         result.text = result.text! + "."
     }
     @IBAction func buttonAdd(_ sender: Any) {
-        operatorFlag = 1
         temp = Double(result.text!)!
+        if operatorFlag2 == 0
+        {
+            temp2 = temp
+        }
         result.text = ""
+        operatorFlag = 1
+        if operatorFlag2 == 0
+        {
+        }
+        else
+        {
+            temp2 = temp + temp2
+        }
+        operatorFlag2 = operatorFlag2 + 1
     }
     @IBAction func buttonSub(_ sender: Any) {
-        operatorFlag = 2
         temp = Double(result.text!)!
+        if operatorFlag2 == 0
+        {
+            temp2 = temp
+        }
         result.text = ""
+        operatorFlag = 2
+        if operatorFlag2 == 0
+        {
+        }
+        else
+        {
+            temp2 = temp - temp2
+        }
+        operatorFlag2 = operatorFlag2 + 1
     }
     @IBAction func buttonDivi(_ sender: Any) {
-        operatorFlag = 3
         temp = Double(result.text!)!
+        if operatorFlag2 == 0
+        {
+            temp2 = temp
+        }
         result.text = ""
+        operatorFlag = 3
+        if operatorFlag2 == 0
+        {
+        }
+        else
+        {
+            temp2 = temp / temp2
+        }
+        operatorFlag2 = operatorFlag2 + 1
     }
     @IBAction func buttonMult(_ sender: Any) {
-        operatorFlag = 4
         temp = Double(result.text!)!
+        if operatorFlag2 == 0
+        {
+            temp2 = temp
+        }
         result.text = ""
+        operatorFlag = 4
+        if operatorFlag2 == 0
+        {
+        }
+        else
+        {
+            temp2 = temp * temp2
+        }
+        operatorFlag2 = operatorFlag2 + 1
     }
     @IBAction func buttonSqrt(_ sender: Any) {
         temp = Double(result.text!)!
@@ -75,25 +125,60 @@ class ViewController: UIViewController {
         result.text = "\(temp)"
     }
     @IBAction func buttonResult(_ sender: Any) {
-        if operatorFlag == 1
+        switch operatorFlag {
+        case 1:
+        if operatorFlag2 == 1
         {
             temp = temp + Double(result.text!)!
             result.text = "\(temp)"
+            operatorFlag2 = 0
         }
-        if operatorFlag == 2
+        else
+        {
+            temp2 = temp2 + Double(result.text!)!
+            result.text = "\(temp2)"
+            operatorFlag2 = 0
+        }
+        case 2:
+        if operatorFlag2 == 1
         {
             temp = temp - Double(result.text!)!
             result.text = "\(temp)"
+            operatorFlag2 = 0
         }
-        if operatorFlag == 3
+        else
+        {
+            temp2 = temp2 - Double(result.text!)!
+            result.text = "\(temp2)"
+            operatorFlag2 = 0
+        }
+        case 3:
+        if operatorFlag2 == 0
         {
             temp = temp / Double(result.text!)!
             result.text = "\(temp)"
+            operatorFlag2 = 0
         }
-        if operatorFlag == 4
+        else
+        {
+            temp2 = temp2 / Double(result.text!)!
+            result.text = "\(temp2)"
+            operatorFlag2 = 0
+        }
+        case 4:
+        if operatorFlag2 == 0
         {
             temp = temp * Double(result.text!)!
             result.text = "\(temp)"
+            operatorFlag2 = 0
+        }
+        else
+        {
+            temp2 = temp2 * Double(result.text!)!
+            result.text = "\(temp2)"
+            operatorFlag2 = 0
+            }
+        default: break
         }
     }
     
