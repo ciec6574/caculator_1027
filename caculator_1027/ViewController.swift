@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         }
         else
         {
-            temp2 = temp - temp2
+            temp2 = temp2 - temp
         }
         operatorFlag2 = operatorFlag2 + 1
     }
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         }
         else
         {
-            temp2 = temp / temp2
+            temp2 = temp2 / temp
         }
         operatorFlag2 = operatorFlag2 + 1
     }
