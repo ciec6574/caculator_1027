@@ -45,6 +45,9 @@ class ViewController: UIViewController {
     @IBAction func button0(_ sender: Any) {
         result.text = result.text! + "0"
     }
+    @IBAction func button00(_ sender: Any) {
+        result.text = result.text! + "00"
+    }
     @IBAction func buttonAC(_ sender: Any) {
         result.text = ""
     }
