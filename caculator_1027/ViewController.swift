@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var temp2:Double = 0
     var operatorFlag = 0
     var operatorFlag2 = 0
+    var temp3 = 0
 
     @IBOutlet var result: UITextField!
     @IBAction func button1(_ sender: Any) {
@@ -48,6 +49,10 @@ class ViewController: UIViewController {
     @IBAction func button00(_ sender: Any) {
         result.text = result.text! + "00"
     }
+    @IBAction func buttonMinus(_ sender: Any) {
+        temp3 = Int(result.text!)! * -1
+        result.text = String(temp3)
+    }
     @IBAction func buttonAC(_ sender: Any) {
         result.text = ""
     }
@@ -60,8 +65,8 @@ class ViewController: UIViewController {
         {
             temp2 = temp
         }
-        result.text = ""
         operatorFlag = 1
+        result.text = ""
         if operatorFlag2 == 0
         {
         }
@@ -77,8 +82,8 @@ class ViewController: UIViewController {
         {
             temp2 = temp
         }
-        result.text = ""
         operatorFlag = 2
+        result.text = ""
         if operatorFlag2 == 0
         {
         }
@@ -94,8 +99,8 @@ class ViewController: UIViewController {
         {
             temp2 = temp
         }
-        result.text = ""
         operatorFlag = 3
+        result.text = ""
         if operatorFlag2 == 0
         {
         }
@@ -111,8 +116,8 @@ class ViewController: UIViewController {
         {
             temp2 = temp
         }
-        result.text = ""
         operatorFlag = 4
+        result.text = ""
         if operatorFlag2 == 0
         {
         }
