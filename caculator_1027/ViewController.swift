@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var temp2:Double = 0
     var operatorFlag = 0
     var operatorFlag2 = 0
-    var temp3 = 0
+    var temp3:Double = 0
 
     @IBOutlet var result: UITextField!
     @IBAction func button1(_ sender: Any) {
@@ -50,8 +50,10 @@ class ViewController: UIViewController {
         result.text = result.text! + "00"
     }
     @IBAction func buttonMinus(_ sender: Any) {
-        temp3 = Int(result.text!)! * -1
-        result.text = String(temp3)
+        temp3 = Double(result.text!)!
+        operatorFlag2 = operatorFlag2 + 1
+        temp3 = temp3 * -1
+        result.text = "\(temp3)"
     }
     @IBAction func buttonAC(_ sender: Any) {
         result.text = ""
