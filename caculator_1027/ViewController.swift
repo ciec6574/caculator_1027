@@ -51,7 +51,6 @@ class ViewController: UIViewController {
     }
     @IBAction func buttonMinus(_ sender: Any) {
         temp3 = Double(result.text!)!
-        operatorFlag2 = operatorFlag2 + 1
         temp3 = temp3 * -1
         result.text = "\(temp3)"
     }
