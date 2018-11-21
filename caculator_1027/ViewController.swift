@@ -139,52 +139,52 @@ class ViewController: UIViewController {
         if operatorFlag2 == 1
         {
             temp = temp + Double(result.text!)!
-            result.text = "\(temp)"
+            result.text = String(format:"%.5f",temp)
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 + Double(result.text!)!
-            result.text = "\(temp2)"
+            result.text = String(format:"%.5f",temp2)
             operatorFlag2 = 0
         }
         case 2:
         if operatorFlag2 == 1
         {
             temp = temp - Double(result.text!)!
-            result.text = "\(temp)"
+            result.text = String(format:"%.5f",temp)
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 - Double(result.text!)!
-            result.text = "\(temp2)"
+            result.text = String(format:"%.5f",temp2)
             operatorFlag2 = 0
         }
         case 3:
         if operatorFlag2 == 0
         {
             temp = temp / Double(result.text!)!
-            result.text = "\(temp)"
+            result.text = String(format:"%.5f",temp)
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 / Double(result.text!)!
-            result.text = "\(temp2)"
+            result.text = String(format:"%.5f",temp2)
             operatorFlag2 = 0
         }
         case 4:
         if operatorFlag2 == 0
         {
             temp = temp * Double(result.text!)!
-            result.text = "\(temp)"
+            result.text = String(format:"%.5f",temp)
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 * Double(result.text!)!
-            result.text = "\(temp2)"
+            result.text = String(format:"%.5f",temp2)
             operatorFlag2 = 0
             }
         default: break
