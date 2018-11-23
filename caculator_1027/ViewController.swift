@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         result.text = result.text! + "."
     }
     @IBAction func buttonAdd(_ sender: Any) {
-        temp = Double(result.text!)!
+    temp = Double(result.text!)!
         if operatorFlag2 == 0
         {
             temp2 = temp
@@ -133,58 +133,59 @@ class ViewController: UIViewController {
         temp = sqrt(temp)
         result.text = "\(temp)"
     }
+    
     @IBAction func buttonResult(_ sender: Any) {
         switch operatorFlag {
         case 1:
         if operatorFlag2 == 1
         {
             temp = temp + Double(result.text!)!
-            result.text = String(format:"%.5f",temp)
+            result.text = String(format:"%.10f",temp)
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 + Double(result.text!)!
-            result.text = String(format:"%.5f",temp2)
+            result.text = String(format:"%.10f",temp2)
             operatorFlag2 = 0
         }
         case 2:
         if operatorFlag2 == 1
         {
             temp = temp - Double(result.text!)!
-            result.text = String(format:"%.5f",temp)
+            result.text = String(format:"%.10f",temp)
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 - Double(result.text!)!
-            result.text = String(format:"%.5f",temp2)
+            result.text = String(format:"%.10f",temp2)
             operatorFlag2 = 0
         }
         case 3:
         if operatorFlag2 == 0
         {
             temp = temp / Double(result.text!)!
-            result.text = String(format:"%.5f",temp)
+            result.text = String(format:"%.10f",temp)
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 / Double(result.text!)!
-            result.text = String(format:"%.5f",temp2)
+            result.text = String(format:"%.10f",temp2)
             operatorFlag2 = 0
         }
         case 4:
         if operatorFlag2 == 0
         {
             temp = temp * Double(result.text!)!
-            result.text = String(format:"%.5f",temp)
+            result.text = String(format:"%.10f",temp)
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 * Double(result.text!)!
-            result.text = String(format:"%.5f",temp2)
+            result.text = String(format:"%.10f",temp2)
             operatorFlag2 = 0
             }
         default: break
