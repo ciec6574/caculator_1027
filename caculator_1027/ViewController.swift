@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         result.text = result.text! + "."
     }
     @IBAction func buttonAdd(_ sender: Any) {
-    temp = Double(result.text!)!
+        temp = Double(result.text!)!
         if operatorFlag2 == 0
         {
             temp2 = temp
