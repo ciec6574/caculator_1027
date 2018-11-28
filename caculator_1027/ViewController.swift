@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var operatorFlag = 0
     var operatorFlag2 = 0
     var temp3:Double = 0
+    var temp4:Double = 0
 
     @IBOutlet var result: UITextField!
     @IBAction func button1(_ sender: Any) {
@@ -48,6 +49,9 @@ class ViewController: UIViewController {
     }
     @IBAction func button00(_ sender: Any) {
         result.text = result.text! + "00"
+    }
+    @IBAction func buttonDoubleClick(_ sender: Any) {
+        result.text = result.text! + "666"
     }
     @IBAction func buttonMinus(_ sender: Any) {
         temp3 = Double(result.text!)!
@@ -140,64 +144,68 @@ class ViewController: UIViewController {
         if operatorFlag2 == 1
         {
             temp = temp + Double(result.text!)!
-            result.text = String(format:"%.10f",temp)
+            temp4 = temp
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 + Double(result.text!)!
-            result.text = String(format:"%.10f",temp2)
+            temp4 = temp2
             operatorFlag2 = 0
         }
         case 2:
         if operatorFlag2 == 1
         {
             temp = temp - Double(result.text!)!
-            result.text = String(format:"%.10f",temp)
+            temp4 = temp
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 - Double(result.text!)!
-            result.text = String(format:"%.10f",temp2)
+            temp4 = temp2
             operatorFlag2 = 0
         }
         case 3:
         if operatorFlag2 == 0
         {
             temp = temp / Double(result.text!)!
-            result.text = String(format:"%.10f",temp)
+            temp4 = temp
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 / Double(result.text!)!
-            result.text = String(format:"%.10f",temp2)
+            temp4 = temp2
             operatorFlag2 = 0
         }
         case 4:
         if operatorFlag2 == 0
         {
             temp = temp * Double(result.text!)!
-            result.text = String(format:"%.10f",temp)
+            temp4 = temp
             operatorFlag2 = 0
         }
         else
         {
             temp2 = temp2 * Double(result.text!)!
-            result.text = String(format:"%.10f",temp2)
+            temp4 = temp2
             operatorFlag2 = 0
             }
         default: break
         }
+        result.text = String(format:"%.10f", temp4)
+        
+        }
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    
+func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
 
-}
+
 
