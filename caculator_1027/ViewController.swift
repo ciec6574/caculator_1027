@@ -50,7 +50,8 @@ class ViewController: UIViewController {
     @IBAction func button00(_ sender: Any) {
         result.text = result.text! + "00"
     }
-    @IBAction func buttonDoubleClick(_ sender: Any) {
+    
+    @IBAction func buttonDoubleClick(_ sender: UIButton) {
         result.text = result.text! + "666"
     }
     @IBAction func buttonMinus(_ sender: Any) {
@@ -194,7 +195,7 @@ class ViewController: UIViewController {
             }
         default: break
         }
-        result.text = String(format:"%.10f", temp4)
+        result.text = String(format:"%.6f", temp4)
         
         }
     }

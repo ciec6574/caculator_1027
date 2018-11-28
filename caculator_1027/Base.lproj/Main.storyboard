@@ -250,7 +250,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="双击666"/>
                                 <connections>
-                                    <action selector="buttonDoubleClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aB3-cg-TLl"/>
+                                    <action selector="buttonDoubleClick:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="Csw-uN-qaY"/>
                                 </connections>
                             </button>
                         </subviews>
