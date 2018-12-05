@@ -245,10 +245,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yav-Z8-4JE">
-                                <rect key="frame" x="120" y="601" width="135" height="54"/>
+                                <rect key="frame" x="85" y="601" width="206" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="双击666"/>
+                                <state key="normal" title="老铁双击666"/>
                                 <connections>
                                     <action selector="buttonDoubleClick:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="Csw-uN-qaY"/>
                                 </connections>
