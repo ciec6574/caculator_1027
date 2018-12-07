@@ -195,7 +195,7 @@ class ViewController: UIViewController {
             }
         default: break
         }
-        result.text = String(format:"%.6f", temp4)
+        result.text = String(format:"%.5f", temp4)
         
         }
     }
