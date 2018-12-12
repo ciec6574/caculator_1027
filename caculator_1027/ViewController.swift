@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var operatorFlag2 = 0
     var temp3:Double = 0
     var temp4:Double = 0
+    var temp5:Double = 0
 
     @IBOutlet var result: UITextField!
     @IBAction func button1(_ sender: Any) {
@@ -138,6 +139,19 @@ class ViewController: UIViewController {
         temp = sqrt(temp)
         result.text = "\(temp)"
     }
+    func RemoveZero(temp5:Double)->String{
+        var str = "\(temp5)"
+        var str2 = str.components(separatedBy: ".")
+        if(str2[1]=="")
+        {
+            str2[1] = "0"
+        }
+        if(Int(str2[1]) == 0)
+        {
+            str = str2[0]
+        }
+        return str
+    }
     
     @IBAction func buttonResult(_ sender: Any) {
         switch operatorFlag {
@@ -195,10 +209,12 @@ class ViewController: UIViewController {
             }
         default: break
         }
-        result.text = String(format:"%.5f", temp4)
-        
+        result.text=String(format: "%.6f", temp4)
+        temp5=Double(result.text!)!
+        result.text="\(temp5)"
         }
     }
+
     
     
     
