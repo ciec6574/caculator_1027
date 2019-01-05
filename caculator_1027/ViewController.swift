@@ -52,13 +52,10 @@ class ViewController: UIViewController {
         result.text = result.text! + "00"
     }
     
-    @IBAction func buttonDoubleClick(_ sender: UIButton) {
-        result.text = result.text! + "666"
-    }
     @IBAction func buttonMinus(_ sender: Any) {
         temp3 = Double(result.text!)!
         temp3 = temp3 * -1
-        result.text = "\(temp3)"
+        result.text = "\(temp3)" 
     }
     @IBAction func buttonAC(_ sender: Any) {
         result.text = ""
