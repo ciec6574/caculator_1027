@@ -69,16 +69,14 @@ class ViewController: UIViewController {
         {
             temp2 = temp
         }
-        operatorFlag = 1
-        result.text = ""
-        if operatorFlag2 == 0
-        {
-        }
         else
         {
             temp2 = temp + temp2
         }
         operatorFlag2 = operatorFlag2 + 1
+        operatorFlag = 1
+        result.text = ""
+        
     }
     @IBAction func buttonSub(_ sender: Any) {
         temp = Double(result.text!)!
@@ -86,16 +84,14 @@ class ViewController: UIViewController {
         {
             temp2 = temp
         }
-        operatorFlag = 2
-        result.text = ""
-        if operatorFlag2 == 0
-        {
-        }
         else
         {
             temp2 = temp2 - temp
         }
         operatorFlag2 = operatorFlag2 + 1
+        operatorFlag = 2
+        result.text = ""
+        
     }
     @IBAction func buttonDivi(_ sender: Any) {
         temp = Double(result.text!)!
@@ -103,16 +99,15 @@ class ViewController: UIViewController {
         {
             temp2 = temp
         }
-        operatorFlag = 3
-        result.text = ""
-        if operatorFlag2 == 0
-        {
-        }
         else
         {
             temp2 = temp2 / temp
         }
         operatorFlag2 = operatorFlag2 + 1
+        operatorFlag = 3
+        result.text = ""
+        
+        
     }
     @IBAction func buttonMult(_ sender: Any) {
         temp = Double(result.text!)!
@@ -120,16 +115,15 @@ class ViewController: UIViewController {
         {
             temp2 = temp
         }
-        operatorFlag = 4
-        result.text = ""
-        if operatorFlag2 == 0
-        {
-        }
         else
         {
             temp2 = temp * temp2
         }
         operatorFlag2 = operatorFlag2 + 1
+        operatorFlag = 4
+        result.text = ""
+        
+        
     }
     @IBAction func buttonSqrt(_ sender: Any) {
         temp = Double(result.text!)!
